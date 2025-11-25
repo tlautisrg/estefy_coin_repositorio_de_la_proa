@@ -1,0 +1,152 @@
+:root {
+  --color-principal: #fffffff1
+
+
+
+}
+body {
+  background: linear-gradient(to bottom right, #fefefe, #fff4f4);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header-card {
+  background: var(--color-principal);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #0000001a;
+  margin-bottom: 25px;
+}
+
+.header-card h1 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.stat-card {
+  padding: 20px;
+  border-radius: 12px;
+  color: var(--color-principal);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.stat-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.stat-card span {
+  display: block;
+  margin-top: 5px;
+  font-size: 32px;
+}
+
+.stat-card.blue { background: linear-gradient(to right, #cad8ff, #704ccd); }
+.stat-card.orange { background: linear-gradient(to right, #ebe1b5, #ba9c2e); }
+.stat-card.green { background: linear-gradient(to right, #b8d2c4, #155b33); }
+
+/* GRID DE TAREAS */
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+}
+
+/* CARD DE TAREA */
+.task-card {
+  background: var(--color-principal);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px #0000001a;
+  transition: 0.3s;
+}
+
+.task-card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.task-top-bar {
+  height: 8px;
+}
+
+.task-content {
+  padding: 20px;
+}
+
+.materia-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid;
+}
+
+.coin-badge {
+  background: var(--color-principal);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #ab8800;
+}
+
+.task-desc {
+  color: var(--color-secundario);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.docente {
+  color: #000000;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.fecha {
+  font-size: 14px;
+  color: #000000;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-pend {
+  background: #e2c3c3;
+  color: #333;
+}
+
+.btn-comp {
+  background: #e0ffe8;
+  color: rgb(56, 56, 56);
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+/* Colores por materia */
+.bg-programacion { background: #dce7ff; color: #1a45d6; border-color: #8fb0ff; }
+.bg-matematica { background: #eeddff; color: #7a29c4; border-color: #c88aff; }
+.bg-lengua { background: #ffd8e7; color: #c2185b; border-color: #ff91b9; }
+.bg-ingles { background: #d6f8d6; color: #2e7d32; border-color: #92d192; }
+.bg-taller { background: #d6f7f2; color: #00796b; border-color: #8ae5d3; }
+.bg-estructura { background: #e0dcff; color: #3f3da5; border-color: #a59dff; }
+.bg-biologia { background: #d8ffe4; color: #087f23; border-color: #90ffb3; }
+.bg-artistica { background: #fff2d0; color: #f4b446; border-color: #ffd792; }
