@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel de Tareas</title>
+  <link rel="stylesheet" href="Tareas.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header-card">
+      <h1>📚 Panel de Tareas</h1>
+
+      <div class="stats-grid">
+        <div class="stat-card blue">
+          <p>Total de Tareas</p>
+          <span id="totalTareas"></span>
+        </div>
+
+        <div class="stat-card orange">
+          <p>Tareas Pendientes</p>
+          <span id="tareasPendientes"></span>
+        </div>
+
+        <div class="stat-card green">
+          <p>Coins Ganadas</p>
+          <span id="coinsGanadas"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor de tarjetas -->
+    <div id="tasksContainer" class="tasks-grid"></div>
+
+  </div>
+
+  <script src="Tarea.js"></script>
+</body>
+</html>
