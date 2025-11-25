@@ -1,55 +1,38 @@
-let data;
+// Simple search handler for the header search
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('searchForm');
+    const input = document.getElementById('searchInput');
 
-// Cargar JSON
-async function loadData() {
-    const res = await fetch("data.json");
-    data = await res.json();
+    if (!form || !input) return;
 
-    // Mostrar monedas
-    document.getElementById("coinCount").textContent = data.usuario.monedas;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const q = input.value.trim().toLowerCase();
 
-    renderTasks();
-    renderStore();
-}
+        // try to find coin items in the page and filter them
+        const items = document.querySelectorAll('.coin-item');
+        if (items && items.length > 0) {
+            let foundAny = false;
+            items.forEach(item => {
+                const name = (item.getAttribute('data-name') || item.textContent || '').toLowerCase();
+                if (!q || name.includes(q)) {
+                    item.style.display = '';
+                    foundAny = true;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
 
-// Cambiar entre secciones
-function showSection(id) {
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
-}
+            if (!foundAny) {
+                alert('No se encontraron resultados para: ' + q);
+            }
+            return;
+        }
 
-// Crear usuario
-function createUser() {
-    const name = document.getElementById("newUser").value;
-    if (!name) return alert("Ingrese un nombre");
-
-    data.usuario.nombre = name;
-
-    alert("Cuenta creada para: " + name);
-}
-
-// Mostrar tareas
-function renderTasks() {
-    const list = document.getElementById("taskList");
-    list.innerHTML = "";
-
-    data.tareas.forEach(t => {
-        const li = document.createElement("li");
-        li.textContent = `${t.nombre} — ${t.estado}`;
-        list.appendChild(li);
+        // No items to filter: basic fallback behavior
+        if (q) {
+            // For now just show an alert or log; you can replace this with navigation or API search
+            alert('Buscando: ' + q);
+        }
     });
-}
-
-// Mostrar tienda
-function renderStore() {
-    const list = document.getElementById("shopList");
-    list.innerHTML = "";
-
-    data.tienda.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = `${item.nombre} — ${item.precio} monedas`;
-        list.appendChild(li);
-    });
-}
-
-loadData();
+});
