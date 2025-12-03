@@ -1,203 +1,43 @@
-/* ------------------------------
-   Reset básico
--------------------------------*/
-* {
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f5;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
-body {
-    background: #EFEFF5;
-    color: #333;
-}
-
-/* ------------------------------
-   Header
--------------------------------*/
-.header {
-    background: #76749A;
+header {
+    background: #4a6cf7;
     color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 0 0 20px 20px;
-}
-
-.header button {
-    font-size: 22px;
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-/* Layout for header groups */
-.header-left {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-/* Search form */
-.search-form {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: #FFF;
-    padding: 6px 10px;
-    border-radius: 20px;
-    min-width: 200px;
-}
-
-.search-input {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 14px;
-    color: #333;
-    width: 140px;
-}
-
-.search-btn {
-    background: transparent;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.search-form:focus-within {
-    box-shadow: 0 0 0 3px rgba(255,255,255,0.12);
-}
-
-/* ------------------------------
-   Contenedor principal
--------------------------------*/
-.container {
     padding: 20px;
-}
-
-/* ------------------------------
-   Tarjeta de saldo principal
--------------------------------*/
-.card {
-    background: #77759C;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 25px;
-    color: white;
-}
-
-.titulo-saldo {
-    font-size: 18px;
-}
-
-.cantidad-saldo {
-    font-size: 38px;
-    font-weight: bold;
-    margin: 10px 0 20px;
-}
-
-/* ------------------------------
-   Acciones
--------------------------------*/
-.acciones {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.accion {
     text-align: center;
 }
 
-.btn-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 15px;
-    background: #E5D9F7;
+nav button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #ffffff;
     border: none;
-    font-size: 24px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-/* ------------------------------
-   Tienda
--------------------------------*/
-.tienda {
-    margin-top: 10px;
-}
-
-.btn-tienda {
-    background: #E5D9F7;
-    color: #333;
-    padding: 12px 20px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn-tienda:hover {
-    background: #d7c7f0;
-}
-
-/* ------------------------------
-   Tarjeta inferior
--------------------------------*/
-.extra-info {
-    background: #77759C;
+.page {
+    display: none;
     padding: 20px;
 }
 
-.barra {
-    width: 100%;
-    height: 12px;
-    background: #D3CCE8;
-    border-radius: 10px;
-    margin-bottom: 12px;
+.page.active {
+    display: block;
 }
 
-/* ------------------------------
-   Responsivo
--------------------------------*/
-@media (max-width: 480px) {
-    .acciones {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .btn-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 26px;
-    }
-
-    /* Hide search on very small screens, reveal as icon/placeholder if needed */
-    .search-form {
-        display: none;
-    }
+.coins-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.coins-list {
-    margin-top: 18px;
-}
-
-.coins-list ul {
-    list-style: none;
-    margin-top: 8px;
-    display: grid;
-    gap: 8px;
-}
-
-.coin-item {
-    background: rgba(255,255,255,0.12);
-    padding: 10px 12px;
-    border-radius: 10px;
+.pig {
+    width: 70px;
 }
