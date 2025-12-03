@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Stephicoins</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Stephicoins</h1>
+        <nav>
+            <button onclick="showSection('usuario')">Usuario</button>
+            <button onclick="showSection('tareas')">Tareas</button>
+            <button onclick="showSection('tienda')">Tienda</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="usuario" class="page active">
+            <h2>Perfil del Usuario</h2>
+
+            <div class="coins-box">
+                <img src="pig.png" alt="chancho" class="pig">
+                <span id="coinCount">0</span>
+            </div>
+
+            <h3>Crear Cuenta</h3>
+            <input id="newUser" placeholder="Nombre de usuario">
+            <button onclick="createUser()">Crear Cuenta</button>
+        </section>
+
+        <section id="tareas" class="page">
+            <h2>Tareas</h2>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="tienda" class="page">
+            <h2>Tienda</h2>
+            <ul id="shopList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

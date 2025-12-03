@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #3f3f3f, #010101);
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family:'Segoe UI';
+    font-size: 5rem;
+    display: inline-block;
+}
+header {
+    background: radial-gradient(circle, #9f01ae, #4f01ae); 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+main{
+    margin: auto;
+    margin-top: 3rem;
+    height: 15rem;
+    width: 70%;
+    background: radial-gradient(circle, #5f31ae, #3f318e); 
+    border-radius: 7px;
+}
+
+
+nav button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+.coins-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.pig {
+    width: 70px;
+}
+
+button,
+nav button {
+    background: #000 !important;
+    color: white !important;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+/* Efecto al pasar el mouse */
+button:hover,
+nav button:hover {
+    box-shadow: 0 0 16px rgb(112, 0, 112);
+    transform: scale(1.06);
+}
+.title-icon{
+    width: 64px;
+    height: 64px;
+    margin: none;
+    display: inline-block;
+}
+
+
+.btn-icon {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto 8px auto;
+}
+
+/* Ícono del título */
+.title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.title-icon {
+    width: 64px;
+    height: 64px;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column; /* icono arriba, texto abajo */
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 120px;
+    height: 120px;
+    font-size: 1rem;
+    background: #000 !important;
+    color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+nav {
+    display: flex;
+    justify-content: center;   /* centra los botones */
+    align-items: center;
+    gap: 20px;                 /* separación entre botones */
+}

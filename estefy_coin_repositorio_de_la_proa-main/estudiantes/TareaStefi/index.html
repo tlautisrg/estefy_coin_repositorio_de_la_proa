@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Stephicoins</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+    <div class="title-box">
+        <img src="../iconos para el prollecto/estifecoin_coin.svg" class="title-icon">
+        <h1>Stephicoins</h1>
+    </div>
+
+    
+        <nav>
+
+                        <button class="menu-btn" onclick="goToCoins()">
+                <img src="../iconos para el prollecto/usuario_steficoins.svg" class="btn-icon">
+                Usuario
+            </button>
+
+            <button class="menu-btn" onclick="goToShop()">
+                <img src="../iconos para el prollecto/LOGO_TIENDA_STEFI_COINS.svg" class="btn-icon">
+                Tienda
+            </button>
+
+            <button class="menu-btn" onclick="goToTasks()">
+                <img src="../iconos para el prollecto/task_esteficoins.svg" class="btn-icon">
+                Tareas
+            </button>
+
+
+        </nav>
+    </header>
+
+    <main>
+        <section id="usuario" class="page active">
+            <h2>Perfil del Usuario</h2>
+
+            <div class="coins-box">
+                <img src="pig.png" alt="chancho" class="pig">
+                <span id="coinCount">0</span>
+            </div>
+
+            <h3>Crear Cuenta</h3>
+            <input id="newUser" placeholder="Nombre de usuario">
+            <button onclick="createUser()">Crear Cuenta</button>
+        </section>
+
+        <section id="tareas" class="page">
+            <h2>Tareas</h2>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="tienda" class="page">
+            <h2>Tienda</h2>
+            <ul id="shopList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

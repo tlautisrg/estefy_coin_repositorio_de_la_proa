@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coins App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="btn-menu">☰</button>
+            <h1 class="titulo-app">Coins</h1>
+        </div>
+
+        <!-- Search form -->
+        <form class="search-form" id="searchForm" role="search" aria-label="Buscar">
+            <input type="search" id="searchInput" class="search-input" placeholder="Buscar..." aria-label="Buscar">
+            <button type="submit" class="search-btn" aria-label="Buscar">🔍</button>
+        </form>
+
+        <button class="btn-profile">⚙</button>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="container">
+
+        <!-- Tarjeta principal -->
+        <section class="card saldo-card">
+            <h2 class="titulo-saldo">Coins disponibles</h2>
+            <p class="cantidad-saldo">$5000</p>
+
+            <div class="acciones">
+                <div class="accion">
+                    <button class="btn-icon">🔄</button>
+                    <span>Ingresar</span>
+                </div>
+                <div class="accion">
+                    <button class="btn-icon">⇆</button>
+                    <span>Transferir</span>
+                </div>
+                <div class="accion">
+                    <button class="btn-icon">👤</button>
+                    <span>Datos</span>
+                </div>
+            </div>
+
+            <!-- Sección tienda -->
+            <div class="tienda">
+                <button class="btn-tienda">
+                    🛒 Tienda
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección inferior (placeholder del diseño) -->
+        <section class="card extra-info">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+        </section>
+
+    </main>
+
+</body>
+<script src="script.js"></script>
+</html>

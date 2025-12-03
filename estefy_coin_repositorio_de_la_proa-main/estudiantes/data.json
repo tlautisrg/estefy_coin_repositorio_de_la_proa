@@ -1,0 +1,14 @@
+{
+    "usuario": {
+        "nombre": "Invitado",
+        "monedas": 120
+    },
+    "tareas": [
+        { "nombre": "Tarea 1", "estado": "Pendiente" },
+        { "nombre": "Tarea 2", "estado": "Completada" }
+    ],
+    "tienda": [
+        { "nombre": "Item A", "precio": 50 },
+        { "nombre": "Item B", "precio": 80 }
+    ]
+}
